@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavori in corso - Edizioni Velatura</title>
+    <!-- Corretto: esce da catalogo e trova direttamente index.css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="contenitore">
+
+        <nav class="menu-navigazione" style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 30px; margin-bottom: 30px; font-family: 'Garamond', serif; width: 100%;">
+
+            <!-- MENU DI NAVIGAZIONE -->
+           <a href="index.html" style="text-decoration: none; color: #5c1d1d; font-weight: bold; font-size: 1.15em; letter-spacing: 0.5px; white-space: nowrap; display: inline-block;">Home</a>
+        </nav>
+
+        <!-- Corretto: esce da catalogo e trova direttamente il logo grafico -->
+        <img src="Logo grafico.jpg" alt="Logo Edizioni Velatura" class="logo-sito-interno">
+        <h1 class="titolo-interno">Edizioni Velatura</h1>
+
+
+    <!-- CONTENUTO CENTRALE DELLA PAGINA -->
+    <main class="sezione-coming-soon">
+        <!-- Fotografia reale del libro aperto -->
+        <img src="./catalogo/libroaperto1.png" alt="Libro Aperto" class="foto-libro-aperto">
+
+        <!-- Riga con il Titolo del libro (si riempie da solo tramite l'URL) -->
+        <div id="dynamic-title" class="titolo-libro-attesa"></div>
+
+        <!-- Scritta più grande sotto -->
+        <h2 class="testo-coming-soon">Coming Soon</h2>
+    </main>
+
+    <!-- SCRIPT PER L'AUTOMAZIONE DEL TITOLO -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const titoloLibro = urlParams.get('titolo');
+
+        if (titoloLibro) {
+            document.getElementById('dynamic-title').innerText = decodeURIComponent(titoloLibro);
+        }
+    </script>
+</div>
+</body>
+</html>
