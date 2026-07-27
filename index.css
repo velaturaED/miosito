@@ -317,45 +317,96 @@ footer p {
    ========================================== */
 @media screen and (max-width: 768px) {
     body {
-        padding: 15px 10px !important;
+        padding: 15px 12px !important; /* Meno spazio in alto per far salire i contenuti */
     }
 
-    /* Layout affiancato riga unica */
+    .logo-sito {
+        height: 100px !important; /* Logo compatto per risparmiare altezza */
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    h1, .testo-coming-soon {
+        font-size: 1.5rem !important;
+        margin-top: 15px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Struttura Verticale */
     .pagina-singolo-libro {
         display: flex !important;
-        flex-direction: row !important; /* Testo a SX, Video a DX */
-        gap: 10px !important;
-        align-items: flex-start !important;
+        flex-direction: column-reverse !important;
+        gap: 15px !important; /* Distanza ridotta tra video e testo */
         width: 100% !important;
+        align-items: center !important;
+        margin-top: 15px !important;
     }
 
-    /* Colonna Testo */
-    .colonna-testo-libro {
-        flex: 1 1 auto !important;
-        min-width: 0 !important; /* Impedisce al testo di spingere il video fuori */
-    }
-
-    /* Colonna Video Miniatura */
+    /* Video compatto: non occupa tutta l'altezza dello schermo */
     .colonna-video {
-        flex: 0 0 80px !important; /* Forza la larghezza a 80px esatti */
-        width: 80px !important;
-        max-width: 80px !important;
-        min-width: 80px !important;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: 260px !important; /* Dimensione contenuta: leggibile ma non gigante */
+        margin: 0 auto !important;
+        order: 1 !important;
     }
 
     .video-presentazione {
         width: 100% !important;
         height: auto !important;
+        max-height: 220px !important; /* Impedisce al video di diventare troppo alto */
+        object-fit: contain !important;
+        aspect-ratio: 16 / 9;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+        border-radius: 4px !important;
+    }
+
+    /* Colonna Testo */
+    .colonna-testo-libro {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        text-align: left !important;
+        order: 2 !important;
     }
 
     .colonna-testo-libro h2 {
-        font-size: 1.2rem !important;
+        font-size: 1.4rem !important;
         margin-top: 0 !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
     }
 
     .sinossi-lunga {
-        font-size: 0.9rem !important;
-        line-height: 1.4 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        color: #333 !important;
+    }
+
+    .bottone-kobo-pagina {
+        display: block !important;
+        width: 100% !important;
+        max-width: 260px !important;
+        margin: 20px auto 0 auto !important;
+        text-align: center !important;
+    }
+
+    /* Menu di navigazione compatto */
+    .menu-navigazione {
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .menu-tendina .contenuto-tendina {
+        position: static !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        background-color: transparent !important;
+    }
+
+    .contenuto-tendina a {
+        padding: 6px 12px !important;
+        border-bottom: 1px solid #dcdad4 !important;
     }
 }
