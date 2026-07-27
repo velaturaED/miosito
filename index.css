@@ -318,6 +318,7 @@ footer p {
 @media screen and (max-width: 768px) {
     body {
         padding: 15px 12px !important;
+        height: auto !important; /* Mantiene la pagina estendibile in altezza */
     }
 
     .logo-sito {
@@ -326,49 +327,51 @@ footer p {
         margin-bottom: 10px !important;
     }
 
-    h1, .testo-coming-soon {
-        font-size: 1.5rem !important;
-        margin-top: 15px !important;
-        margin-bottom: 20px !important;
-    }
-
-    /* Contenitore principale in verticale */
+    /* Struttura verticale fluida: sblocca le altezze */
     .pagina-singolo-libro {
         display: flex !important;
-        flex-direction: column !important; /* Disposizione verticale standard */
-        gap: 15px !important;
+        flex-direction: column !important; /* Sequenza standard: prima elemento 1, poi elemento 2 */
+        gap: 20px !important;
         width: 100% !important;
+        height: auto !important; /* Impedisce al contenitore di schiacciare i figli */
         align-items: center !important;
-        margin-top: 15px !important;
+        position: static !important; /* Elimina posizionamenti assoluti che creano sovrapposizioni */
     }
 
-    /* FORZA IL VIDEO AL PRIMO POSTO (IN ALTO) */
+    /* COLONNA VIDEO: Posizionata in alto */
     .colonna-video {
-        order: 1 !important; /* Appare per PRIMO */
+        order: 1 !important;
         width: 100% !important;
-        max-width: 260px !important; /* Dimensione compatta per far vedere il testo sotto */
+        max-width: 280px !important;
+        height: auto !important;
+        position: static !important;
         margin: 0 auto !important;
     }
 
     .video-presentazione {
         width: 100% !important;
         height: auto !important;
-        max-height: 220px !important;
-        object-fit: contain !important;
+        max-height: 200px !important;
+        display: block !important;
+        position: static !important;
         aspect-ratio: 16 / 9;
         box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
         border-radius: 4px !important;
     }
 
-    /* FORZA IL TESTO AL SECONDO POSTO (SOTTO) */
+    /* COLONNA TESTO: Posizionata SOTTO al video */
     .colonna-testo-libro {
-        order: 2 !important; /* Appare per SECONDO */
+        order: 2 !important;
         width: 100% !important;
+        height: auto !important;
+        position: static !important;
         text-align: left !important;
+        clear: both !important; /* Forza la colonna a posizionarsi sotto qualsiasi elemento precedente */
+        margin-top: 10px !important;
     }
 
     .colonna-testo-libro h2 {
-        font-size: 1.4rem !important;
+        font-size: 1.3rem !important;
         margin-top: 0 !important;
         margin-bottom: 10px !important;
         text-align: center !important;
@@ -378,6 +381,9 @@ footer p {
         font-size: 0.95rem !important;
         line-height: 1.5 !important;
         color: #333 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .bottone-kobo-pagina {
@@ -388,6 +394,7 @@ footer p {
         text-align: center !important;
     }
 
+    /* Menu di navigazione */
     .menu-navigazione {
         flex-direction: column !important;
         gap: 8px !important;
