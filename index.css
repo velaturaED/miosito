@@ -317,41 +317,57 @@ footer p {
    ========================================== */
 @media screen and (max-width: 768px) {
     body {
-        padding: 15px 12px !important;
-        height: auto !important; /* Mantiene la pagina estendibile in altezza */
+        padding: 10px 12px !important; /* Ridotto il padding top/bottom */
+        height: auto !important;
     }
 
+    /* 1. RIDUZIONE DEL LOGO */
     .logo-sito {
-        height: 100px !important;
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
+        height: 65px !important; /* Ridotto da 100px a 65px per risparmiare spazio */
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
     }
 
-    /* Struttura verticale fluida: sblocca le altezze */
+    /* 2. COMPATTAZIONE MENU DI NAVIGAZIONE */
+    .menu-navigazione {
+        flex-direction: row !important; /* Mantiene il menu in orizzontale anziché a colonna */
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        margin-bottom: 10px !important; /* Ridotto da 15px */
+    }
+
+    .menu-navigazione a, .pulsante-tendina {
+        font-size: 0.95em !important; /* Testo leggermente più piccolo per occupare meno spazio */
+    }
+
+    /* 3. STRUTTURA PAGINA SINGOLO LIBRO */
     .pagina-singolo-libro {
         display: flex !important;
-        flex-direction: column !important; /* Sequenza standard: prima elemento 1, poi elemento 2 */
-        gap: 20px !important;
+        flex-direction: column !important;
+        gap: 10px !important; /* Ridotto il distacco tra video e elementi */
         width: 100% !important;
-        height: auto !important; /* Impedisce al contenitore di schiacciare i figli */
+        height: auto !important;
         align-items: center !important;
-        position: static !important; /* Elimina posizionamenti assoluti che creano sovrapposizioni */
+        position: static !important;
+        margin-top: 10px !important; /* Ridotto lo spazio sopra il blocco principale */
+        margin-bottom: 30px !important;
     }
 
-    /* COLONNA VIDEO: Posizionata in alto */
+    /* COLONNA VIDEO */
     .colonna-video {
         order: 1 !important;
         width: 100% !important;
-        max-width: 280px !important;
+        max-width: 260px !important;
         height: auto !important;
         position: static !important;
-        margin: 0 auto !important;
+        margin: 0 auto 5px auto !important;
     }
 
     .video-presentazione {
         width: 100% !important;
         height: auto !important;
-        max-height: 200px !important;
+        max-height: 170px !important; /* Ridotto leggermente per far "spuntare" il testo sotto */
         display: block !important;
         position: static !important;
         aspect-ratio: 16 / 9;
@@ -359,27 +375,27 @@ footer p {
         border-radius: 4px !important;
     }
 
-    /* COLONNA TESTO: Posizionata SOTTO al video */
+    /* COLONNA TESTO: Subito sotto al video */
     .colonna-testo-libro {
         order: 2 !important;
         width: 100% !important;
         height: auto !important;
         position: static !important;
         text-align: left !important;
-        clear: both !important; /* Forza la colonna a posizionarsi sotto qualsiasi elemento precedente */
-        margin-top: 10px !important;
+        clear: both !important;
+        margin-top: 5px !important;
     }
 
     .colonna-testo-libro h2 {
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important; /* Titolo del libro un po' più compatto */
         margin-top: 0 !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 8px !important;
         text-align: center !important;
     }
 
     .sinossi-lunga {
         font-size: 0.95rem !important;
-        line-height: 1.5 !important;
+        line-height: 1.4 !important;
         color: #333 !important;
         display: block !important;
         visibility: visible !important;
@@ -390,15 +406,8 @@ footer p {
         display: block !important;
         width: 100% !important;
         max-width: 260px !important;
-        margin: 20px auto 0 auto !important;
+        margin: 15px auto 0 auto !important;
         text-align: center !important;
-    }
-
-    /* Menu di navigazione */
-    .menu-navigazione {
-        flex-direction: column !important;
-        gap: 8px !important;
-        margin-bottom: 15px !important;
     }
 
     .menu-tendina .contenuto-tendina {
