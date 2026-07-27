@@ -317,7 +317,7 @@ footer p {
    ========================================== */
 @media (max-width: 768px) {
     body {
-        padding: 20px 12px; /* Sfrutta al massimo lo spazio laterale */
+        padding: 15px 10px; /* Riduce i margini esterni per guadagnare spazio */
     }
 
     .logo-sito {
@@ -328,27 +328,35 @@ footer p {
         font-size: 1.6rem;
     }
 
-    /* Mantiene il layout affiancato anche su cellulare */
+    /* Struttura affiancata: Testo a sinistra, Video a destra */
     .pagina-singolo-libro {
-        flex-direction: row-reverse; /* Sposta il video a sinistra e il testo a destra */
-        gap: 12px;                   /* Riduciamo lo spazio tra le colonne */
+        flex-direction: row; 
+        gap: 10px;          /* Distanza minima per non sprecare spazio */
         align-items: flex-start;
+        width: 100%;
     }
 
-    /* Il video diventa una miniatura compatta su mobile */
+    /* Il testo occupa tutto lo spazio rimanente senza spingere fuori il video */
+    .colonna-testo-libro {
+        flex: 1 1 auto;
+        min-width: 0; /* Fondamentale: impedisce al testo di uscire dallo schermo */
+    }
+
+    /* Miniatura video compattissima (80px) per non essere mai tagliata */
     .colonna-video {
-        flex: 0 0 100px; /* Larghezza fissa della miniatura (100px) */
-        width: 100px;
+        flex: 0 0 80px; 
+        width: 80px;
+        max-width: 80px;
     }
 
     .colonna-testo-libro h2 {
-        font-size: 1.3em; /* Titolo leggermente più compatto per non occupare troppe righe */
-        margin-bottom: 10px;
+        font-size: 1.25em; 
+        margin-bottom: 8px;
     }
 
     .sinossi-lunga {
-        font-size: 0.95em; /* Testo leggibile ma ben proporzionato */
-        line-height: 1.5;
+        font-size: 0.9em; 
+        line-height: 1.4;
     }
 
     .menu-navigazione {
