@@ -421,7 +421,19 @@ footer p {
         margin: 10px auto 0 auto !important;
         text-align: center !important;
     }
+   
+   footer a {
+    color: #5c1d1d; /* Lo stesso rosso che usi per il titolo in attesa */
+    text-decoration: none;
+   }
 
+   footer a:hover {
+    text-decoration: underline;
+   }
+
+   footer .riga-privacy {
+       margin-top: 15px;
+   }
     /* 6. RIPRISTINO E ADATTAMENTO CATALOGO PER SMARTPHONE */
    .riga-libro {
         display: flex !important;
