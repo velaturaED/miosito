@@ -317,48 +317,48 @@ footer p {
    ========================================== */
 @media screen and (max-width: 768px) {
     body {
-        padding: 10px 12px !important; /* Ridotto il padding top/bottom */
+        padding: 8px 10px !important;
         height: auto !important;
     }
 
-    /* 1. RIDUZIONE DEL LOGO */
+    /* 1. INTESTAZIONE COMPATTA */
     .logo-sito {
-        height: 65px !important; /* Ridotto da 100px a 65px per risparmiare spazio */
+        height: 45px !important; /* Logo molto leggero in cima */
         margin-top: 5px !important;
         margin-bottom: 5px !important;
     }
 
-    /* 2. COMPATTAZIONE MENU DI NAVIGAZIONE */
     .menu-navigazione {
-        flex-direction: row !important; /* Mantiene il menu in orizzontale anziché a colonna */
+        flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 12px !important;
-        margin-bottom: 10px !important; /* Ridotto da 15px */
+        gap: 8px !important;
+        margin-bottom: 8px !important;
     }
 
     .menu-navigazione a, .pulsante-tendina {
-        font-size: 0.95em !important; /* Testo leggermente più piccolo per occupare meno spazio */
+        font-size: 0.85em !important;
     }
 
-    /* 3. STRUTTURA PAGINA SINGOLO LIBRO */
+    /* 2. STRUTTURA PAGINA */
     .pagina-singolo-libro {
         display: flex !important;
         flex-direction: column !important;
-        gap: 10px !important; /* Ridotto il distacco tra video e elementi */
+        gap: 8px !important;
         width: 100% !important;
         height: auto !important;
         align-items: center !important;
         position: static !important;
-        margin-top: 10px !important; /* Ridotto lo spazio sopra il blocco principale */
-        margin-bottom: 30px !important;
+        margin-top: 5px !important;
+        margin-bottom: 20px !important;
     }
 
-    /* COLONNA VIDEO */
+    /* 3. COLONNA E VIDEO VERTICALE (FORMATO 9:16) */
     .colonna-video {
         order: 1 !important;
         width: 100% !important;
-        max-width: 260px !important;
+        /* Riduciamo la larghezza a 160px così in altezza 9:16 occupi solo circa 284px */
+        max-width: 160px !important; 
         height: auto !important;
         position: static !important;
         margin: 0 auto 5px auto !important;
@@ -367,15 +367,16 @@ footer p {
     .video-presentazione {
         width: 100% !important;
         height: auto !important;
-        max-height: 170px !important; /* Ridotto leggermente per far "spuntare" il testo sotto */
+        max-height: none !important;
         display: block !important;
         position: static !important;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 9 / 16 !important; /* IMPOSTATO IN FORMATO VERTICALE 9:16 */
         box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
-        border-radius: 4px !important;
+        border-radius: 6px !important;
+        object-fit: cover !important; /* Mantiene l'inquadratura perfetta senza deformarla */
     }
 
-    /* COLONNA TESTO: Subito sotto al video */
+    /* 4. TESTO SUBITO SOTTO */
     .colonna-testo-libro {
         order: 2 !important;
         width: 100% !important;
@@ -387,14 +388,14 @@ footer p {
     }
 
     .colonna-testo-libro h2 {
-        font-size: 1.2rem !important; /* Titolo del libro un po' più compatto */
+        font-size: 1.1rem !important;
         margin-top: 0 !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 5px !important;
         text-align: center !important;
     }
 
     .sinossi-lunga {
-        font-size: 0.95rem !important;
+        font-size: 0.9rem !important;
         line-height: 1.4 !important;
         color: #333 !important;
         display: block !important;
@@ -405,8 +406,8 @@ footer p {
     .bottone-kobo-pagina {
         display: block !important;
         width: 100% !important;
-        max-width: 260px !important;
-        margin: 15px auto 0 auto !important;
+        max-width: 220px !important;
+        margin: 12px auto 0 auto !important;
         text-align: center !important;
     }
 
@@ -417,12 +418,6 @@ footer p {
         border: none !important;
         background-color: transparent !important;
     }
-
-    .contenuto-tendina a {
-        padding: 6px 12px !important;
-        border-bottom: 1px solid #dcdad4 !important;
-    }
-}
 
     .contenuto-tendina a {
         padding: 6px 12px !important;
