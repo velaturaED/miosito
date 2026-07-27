@@ -156,7 +156,7 @@ h1 {
 
 .copertina-lista {
     width: 80px;
-    height: 130px;
+    height: auto;
     object-fit: contain;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
     flex-shrink: 0;
@@ -429,7 +429,7 @@ footer p {
 
     .copertina-lista {
         width: 70px !important;
-        height: 110px !important;
+        height: auto !important;
         object-fit: contain !important;
     }
 
