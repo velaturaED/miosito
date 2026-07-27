@@ -481,3 +481,47 @@ footer p {
         border-bottom: 1px solid #dcdad4 !important;
     }
 }
+
+/* ==========================================
+   7. PAGINA PRIVACY POLICY
+   ========================================== */
+.contenuto-privacy {
+    max-width: 750px;
+    margin: 40px auto 60px auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.contenuto-privacy h2 {
+    font-family: "Garamond", "Georgia", serif;
+    font-size: 1.4rem;
+    color: #5c1d1d;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contenuto-privacy p {
+    font-family: "Garamond", "Georgia", serif;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+}
+
+.torna-home {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #dcdad4;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85rem;
+}
+
+.torna-home a {
+    color: #5c1d1d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.torna-home a:hover {
+    text-decoration: underline;
+}
