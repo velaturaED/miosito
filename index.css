@@ -317,34 +317,45 @@ footer p {
    ========================================== */
 @media screen and (max-width: 768px) {
     body {
-        padding: 4px 10px !important; /* Spazio in cima al telefono ridotto al minimo */
+        padding: 4px 10px !important;
         height: auto !important;
     }
 
-    /* 1. INTESTAZIONE ULTRA-COMPATTA */
-    .logo-sito {
-        height: 35px !important; /* Logo molto piccolo per liberare spazio */
+    /* 1. RIDUZIONE LOGO E TITOLO NELLE SOTTOPAGINE */
+    .logo-sito, .logo-sito-interno {
+        height: 35px !important;
         margin-top: 2px !important;
         margin-bottom: 2px !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
+    .titolo-interno, h1 {
+        font-size: 1.1rem !important;
+        margin-top: 2px !important;
+        margin-bottom: 8px !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* 2. MENU COMPATTO */
     .menu-navigazione {
         flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 6px !important;
-        margin-bottom: 4px !important;
+        gap: 12px !important;
+        margin-bottom: 6px !important;
     }
 
     .menu-navigazione a, .pulsante-tendina {
-        font-size: 0.8em !important;
+        font-size: 0.85em !important;
     }
 
-    /* 2. STRUTTURA PAGINA */
+    /* 3. STRUTTURA PAGINA SINGOLO LIBRO */
     .pagina-singolo-libro {
         display: flex !important;
         flex-direction: column !important;
-        gap: 4px !important;
+        gap: 6px !important;
         width: 100% !important;
         height: auto !important;
         align-items: center !important;
@@ -353,11 +364,11 @@ footer p {
         margin-bottom: 15px !important;
     }
 
-    /* 3. COLONNA E VIDEO VERTICALE (FORMATO 9:16) */
+    /* 4. COLONNA E VIDEO VERTICALE (9:16) */
     .colonna-video {
         order: 1 !important;
         width: 100% !important;
-        max-width: 140px !important; /* Portato a 140px per ridurre l'altezza a ~250px */
+        max-width: 135px !important; /* Riconduce l'altezza a soli ~240px */
         height: auto !important;
         position: static !important;
         margin: 0 auto 4px auto !important;
@@ -375,7 +386,7 @@ footer p {
         object-fit: cover !important;
     }
 
-    /* 4. TESTO SUBITO SOTTO */
+    /* 5. TESTO SOTTO AL VIDEO */
     .colonna-testo-libro {
         order: 2 !important;
         width: 100% !important;
@@ -423,8 +434,4 @@ footer p {
         border-bottom: 1px solid #dcdad4 !important;
     }
 }
-    .contenuto-tendina a {
-        padding: 6px 12px !important;
-        border-bottom: 1px solid #dcdad4 !important;
-    }
 }
