@@ -307,17 +307,18 @@ footer {
     color: #666;
     text-align: center;
 }
-footer a {
-    color: #666; /* Stesso grigio del testo */
+footer a, 
+footer a:visited {
+    color: #5c1d1d !important; /* Il tuo bordeaux (oppure #666 se lo vuoi grigio) */
     text-decoration: none;
-    font-weight: bold; /* Un po' più spesso per farsi notare */
-   }
+    font-weight: bold;
+}
 
-   footer a:hover {
+footer a:hover, 
+footer a:active {
+    color: #5c1d1d !important;
     text-decoration: underline;
-   color: #5c1d1d; /* Diventa rosso al passaggio del mouse */
-   }
-
+}
    footer .riga-privacy {
        margin-top: 15px;
    }
