@@ -424,16 +424,24 @@ footer p {
 
     /* 6. RIPRISTINO E ADATTAMENTO CATALOGO PER SMARTPHONE */
     .riga-libro {
+        display: flex !important;
+        align-items: flex-start !important; /* Forza l'allineamento perfetto in alto */
         gap: 15px !important;
     }
 
     .copertina-lista {
         width: 70px !important;
         height: auto !important;
+        margin-top: 0 !important; /* Rimuove qualsiasi margine superiore dall'immagine */
         object-fit: contain !important;
     }
-
-    .menu-tendina .contenuto-tendina {
+   
+   .info-lista-libro h3 {
+        margin-top: 0 !important; /* Mantiene la prima riga del testo a filo con la cima dell'immagine */
+        padding-top: 0 !important;
+    }
+    
+   .menu-tendina .contenuto-tendina {
         position: static !important;
         width: 100% !important;
         box-shadow: none !important;
