@@ -435,10 +435,25 @@ footer p {
         margin-top: 0 !important; /* Rimuove qualsiasi margine superiore dall'immagine */
         object-fit: contain !important;
     }
-   
-   .info-lista-libro h3 {
-        margin-top: 0 !important; /* Mantiene la prima riga del testo a filo con la cima dell'immagine */
+
+   .copertina-lista {
+        width: 70px !important;
+        height: auto !important;
+        margin-top: 0 !important;
         padding-top: 0 !important;
+        display: block !important;
+    }
+   
+.info-lista-libro {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+
+    .info-lista-libro h3 {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        line-height: 1.2 !important; /* Mantiene la prima riga ben attaccata al margine superiore */
     }
     
    .menu-tendina .contenuto-tendina {
