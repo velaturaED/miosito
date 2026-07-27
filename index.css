@@ -317,51 +317,50 @@ footer p {
    ========================================== */
 @media screen and (max-width: 768px) {
     body {
-        padding: 8px 10px !important;
+        padding: 4px 10px !important; /* Spazio in cima al telefono ridotto al minimo */
         height: auto !important;
     }
 
-    /* 1. INTESTAZIONE COMPATTA */
+    /* 1. INTESTAZIONE ULTRA-COMPATTA */
     .logo-sito {
-        height: 45px !important; /* Logo molto leggero in cima */
-        margin-top: 5px !important;
-        margin-bottom: 5px !important;
+        height: 35px !important; /* Logo molto piccolo per liberare spazio */
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
     }
 
     .menu-navigazione {
         flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 8px !important;
-        margin-bottom: 8px !important;
+        gap: 6px !important;
+        margin-bottom: 4px !important;
     }
 
     .menu-navigazione a, .pulsante-tendina {
-        font-size: 0.85em !important;
+        font-size: 0.8em !important;
     }
 
     /* 2. STRUTTURA PAGINA */
     .pagina-singolo-libro {
         display: flex !important;
         flex-direction: column !important;
-        gap: 8px !important;
+        gap: 4px !important;
         width: 100% !important;
         height: auto !important;
         align-items: center !important;
         position: static !important;
-        margin-top: 5px !important;
-        margin-bottom: 20px !important;
+        margin-top: 2px !important;
+        margin-bottom: 15px !important;
     }
 
     /* 3. COLONNA E VIDEO VERTICALE (FORMATO 9:16) */
     .colonna-video {
         order: 1 !important;
         width: 100% !important;
-        /* Riduciamo la larghezza a 160px così in altezza 9:16 occupi solo circa 284px */
-        max-width: 160px !important; 
+        max-width: 140px !important; /* Portato a 140px per ridurre l'altezza a ~250px */
         height: auto !important;
         position: static !important;
-        margin: 0 auto 5px auto !important;
+        margin: 0 auto 4px auto !important;
     }
 
     .video-presentazione {
@@ -370,10 +369,10 @@ footer p {
         max-height: none !important;
         display: block !important;
         position: static !important;
-        aspect-ratio: 9 / 16 !important; /* IMPOSTATO IN FORMATO VERTICALE 9:16 */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+        aspect-ratio: 9 / 16 !important;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15) !important;
         border-radius: 6px !important;
-        object-fit: cover !important; /* Mantiene l'inquadratura perfetta senza deformarla */
+        object-fit: cover !important;
     }
 
     /* 4. TESTO SUBITO SOTTO */
@@ -384,19 +383,19 @@ footer p {
         position: static !important;
         text-align: left !important;
         clear: both !important;
-        margin-top: 5px !important;
+        margin-top: 2px !important;
     }
 
     .colonna-testo-libro h2 {
-        font-size: 1.1rem !important;
+        font-size: 1.05rem !important;
         margin-top: 0 !important;
-        margin-bottom: 5px !important;
+        margin-bottom: 4px !important;
         text-align: center !important;
     }
 
     .sinossi-lunga {
-        font-size: 0.9rem !important;
-        line-height: 1.4 !important;
+        font-size: 0.88rem !important;
+        line-height: 1.35 !important;
         color: #333 !important;
         display: block !important;
         visibility: visible !important;
@@ -407,7 +406,7 @@ footer p {
         display: block !important;
         width: 100% !important;
         max-width: 220px !important;
-        margin: 12px auto 0 auto !important;
+        margin: 10px auto 0 auto !important;
         text-align: center !important;
     }
 
@@ -419,6 +418,11 @@ footer p {
         background-color: transparent !important;
     }
 
+    .contenuto-tendina a {
+        padding: 4px 10px !important;
+        border-bottom: 1px solid #dcdad4 !important;
+    }
+}
     .contenuto-tendina a {
         padding: 6px 12px !important;
         border-bottom: 1px solid #dcdad4 !important;
