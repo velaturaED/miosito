@@ -317,26 +317,38 @@ footer p {
    ========================================== */
 @media (max-width: 768px) {
     body {
-        padding: 20px 15px;
+        padding: 20px 12px; /* Sfrutta al massimo lo spazio laterale */
     }
 
     .logo-sito {
-        height: 150px;
+        height: 140px;
     }
 
     h1, .testo-coming-soon {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
+    /* Mantiene il layout affiancato anche su cellulare */
     .pagina-singolo-libro {
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: row-reverse; /* Sposta il video a sinistra e il testo a destra */
+        gap: 12px;                   /* Riduciamo lo spazio tra le colonne */
+        align-items: flex-start;
     }
 
+    /* Il video diventa una miniatura compatta su mobile */
     .colonna-video {
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
+        flex: 0 0 100px; /* Larghezza fissa della miniatura (100px) */
+        width: 100px;
+    }
+
+    .colonna-testo-libro h2 {
+        font-size: 1.3em; /* Titolo leggermente più compatto per non occupare troppe righe */
+        margin-bottom: 10px;
+    }
+
+    .sinossi-lunga {
+        font-size: 0.95em; /* Testo leggibile ma ben proporzionato */
+        line-height: 1.5;
     }
 
     .menu-navigazione {
